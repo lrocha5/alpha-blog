@@ -1,0 +1,11 @@
+<h1>This is the Article.all Page</h1>
+
+<% Article.all.each do |item| %>
+
+    <h2>
+        <%= item.title%>
+    </h2>
+    <p>
+        <%=item.description%>
+    </p>
+<% end %>
