@@ -1,6 +1,39 @@
-<h1>This is the Edit page</h1>
+<div class="container">
+
+    <h1>Edit article</h1>
+    <% if @article.errors.any? %>
+
+        <div class="text-bg-warning p-3">
+            <h6>The following errors prevented the article from being saved</h6>
+            <ul>
+                <% @article.errors.full_messages.each do |msg| %>
+                    <li >
+                        <small >
+                            <%= msg %>
+                        </small>
+                    </li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    <%= form_with(model: @article, local: true )  do |f| %>
+        <p>
+            <%= f.label :title %><br/>
+            <%= f.text_field :title %>
+        </p>
 
 
-  <h3>
-    <%= @article.title %>
-  </h3>
+        <p>
+            <%= f.label :description %><br/>
+            <%= f.text_area :description %>
+        </p>
+
+        <p>
+            <%= f.submit %>
+        </p>
+
+
+    <% end %>
+
+</div>
