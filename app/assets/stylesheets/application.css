@@ -13,3 +13,68 @@
  *= require_tree .
  *= require_self
  */
+
+ h1,h2,h3,h4,h5,h6,p,ul,ol,a {
+    margin: 0px;
+ }
+
+ .spacer-20{
+
+    height: 20px;
+ }
+
+ .spacer-40{
+
+    height: 40px;
+ }
+
+ .spacer-60{
+
+    height: 60px;
+ }
+
+ .spacer-80{
+
+    height: 80px;
+ }
+
+ .vertical-8{
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+ }
+
+ .vertical-12{
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    
+ }
+
+ .vertical-16{
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+ }
+
+ .vertical-24{
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    
+ }
+
+
+ .vertical-32{
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    
+ }
