@@ -23,7 +23,8 @@
                         <%= article.description %>
                     </td>
                     <td>
-                        <%= link_to "Read", article %>
+                        <%= link_to "Read", article, class: 'btn btn-primary' %>
+                        <%= button_to "Delete", article_path(article), method: :delete, class: 'btn btn-danger' %>
                     </td>
                 </tr>
             <% end %>
