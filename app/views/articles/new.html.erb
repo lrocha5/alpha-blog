@@ -1,39 +1,7 @@
 <div class="container">
 
     <h1>This is the heading</h1>
-    <% if @article.errors.any? %>
-
-        <div class="text-bg-warning p-3">
-            <h6>The following errors prevented the article from being saved</h6>
-            <ul>
-                <% @article.errors.full_messages.each do |msg| %>
-                    <li >
-                        <small >
-                            <%= msg %>
-                        </small>
-                    </li>
-                <% end %>
-            </ul>
-        </div>
-    <% end %>
-
-    <%= form_with scope: :article, url: articles_path, local: true do |f| %>
-        <p>
-            <%= f.label :title %><br/>
-            <%= f.text_field :title %>
-        </p>
-
-
-        <p>
-            <%= f.label :description %><br/>
-            <%= f.text_area :description %>
-        </p>
-
-        <p>
-            <%= f.submit %>
-        </p>
-
-
-    <% end %>
+   
+   <%= render 'form' %>
 
 </div>
