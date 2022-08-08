@@ -16,7 +16,7 @@
 
     <div class="btn__flex-wrapper">
     <%= link_to 'Edit article', edit_article_path(@article), class: 'btn btn-warning' %>
-     <%= button_to "Delete article", article_path(@article), method: :delete, class: 'btn btn-outline-danger' %>
+     <%= button_to 'Delete', article_path(@article), method: :delete, onclick: "return confirm('Do you really want to delete this article?')", class: "btn btn-danger" %>
     </div>
 
     <div class="spacer-20"></div>
