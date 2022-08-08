@@ -78,3 +78,11 @@
     gap: 32px;
     
  }
+
+ .index__heading-wrapper{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+
+ }

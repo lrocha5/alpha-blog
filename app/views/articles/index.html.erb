@@ -1,13 +1,22 @@
 <div class="container">
     <div class="spacer-40"></div>
+  
+    <div class="index__heading-wrapper">
     <h1>All articles</h1>
+    <%= link_to 'Create a new article', new_article_path(@article), class: 'btn btn-primary' %>
+    
+    
+    </div>
     <div class="spacer-40"></div>
+
+
     <table class="table">
 
         <thead>
             <th>Title</th>
             <th>Description</th>
             <th>Actions</th>
+            <th></th>
             <th></th>
         </thead>
 
@@ -27,10 +36,20 @@
                         <%= link_to "Read", article, class: 'btn btn-outline-primary' %>
                         
                     </td>
+                    
+                    <td>
+                        
+                        <%= link_to 'Edit', edit_article_path(article), class: 'btn btn-outline-warning' %>
+                    </td>
+
                     <td>
                         
                         <%= button_to "Delete", article_path(article), method: :delete, class: 'btn btn-outline-danger' %>
                     </td>
+
+
+
+
                 </tr>
             <% end %>
 
