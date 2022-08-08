@@ -12,7 +12,14 @@
         <%= @article.description%>
     </p>
 
-    <%= link_to 'Edit this article', edit_article_path(@article) %>
+    <div class="spacer-20"></div>
+
+    <div class="btn__flex-wrapper">
+    <%= link_to 'Edit article', edit_article_path(@article), class: 'btn btn-warning' %>
+     <%= button_to "Delete article", article_path(@article), method: :delete, class: 'btn btn-outline-danger' %>
+    </div>
+
+    <div class="spacer-20"></div>
     <%= link_to 'See articles', articles_path %>
 
 
