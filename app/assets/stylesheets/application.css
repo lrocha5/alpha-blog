@@ -99,3 +99,8 @@
    display: flex;
    flex-direction: row;
  }
+
+ .button_to{
+
+   display: contents;
+ }
